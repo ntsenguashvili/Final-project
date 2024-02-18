@@ -30,10 +30,18 @@ body {
   width: 100%;
 }
 
+
+/* Common Items */
+.red {
+    color: #e93656;
+  }
+
+  
 /* section slider-01 */
 .slider {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  max-width: 100vw;
   background-color: grey;
 }
 .logo {
@@ -109,6 +117,43 @@ body {
   height: 6px;
   width: 340px;
 }
-.red {
-  color: #e93656;
+
+
+/* Section - Portfolio */
+#portfolio-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio{
+    min-height: 80%;
+    display: flex;
+    flex-direction: row;
+}
+#portfolio div{
+    width: 20%;
+    border: 1px solid red;
+}
+#contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 20%;
+    background: #131A36 0% 0% no-repeat padding-box;
+}
+#contact div{
+    display: flex;
+    color: aliceblue;
+    min-width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
 }
