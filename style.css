@@ -180,16 +180,19 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  min-height: 20%;
+  gap: 100px;
+  height: 20%;
+  max-height: 20%;
+  min-height: 200px;
   background: #131A36 0% 0% no-repeat padding-box;
 }
+
 
 #contact div {
   display: flex;
   flex-direction: row;
   color: aliceblue;
-  min-width: 20%;
-  /* height: 100%; */
+
   align-items: center;
   justify-content: center;
 }
@@ -202,31 +205,46 @@ body {
 .contact-icon {
   border: 2px dashed #FFFFFF;
   border-radius: 90px;
-  height: 90px;
-  width: 90px;
+  min-height: 90px;
+  min-width: 90px;
+  height: 15vh;
+  width: 15vh;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
 }
+
+.contact-icon:hover{
+    background-color: #e93656;    
+}    
+
 
 /* section - grid */
 #grid-container {
   display: grid;
-  align-items: baseline;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 2%;
-  width: 80%;
-  padding-left: 20%;
+  gap: 16px;
   padding-top: 10%;
   padding-bottom: 10%;
+  width: 80%;
+  margin: 0 auto;
 }
 
+
+.hidden_item{
+    display: none;
+}
 #grid-container div {
-  width: 285px;
   height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #FAFAFA;
+  cursor: pointer;
 }
 
 
