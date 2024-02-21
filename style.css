@@ -102,6 +102,38 @@ body {
   width: 300px;
 }
 
+.description div p:first-child {
+  font-family: GlacialIndifference-Regular;
+  font-size: 49.7px;
+  text-align: left;
+  letter-spacing: 0.75px;
+  color: #212121;
+}
+
+.description div p:nth-child(2) {
+  font-family: GlacialIndifference-Bold;
+  font-size: 71px;
+  text-align: left;
+  letter-spacing: 1.06px;
+  color: #212121;
+}
+
+.description div p:nth-child(3) {
+  font-family: GlacialIndifference-Regular;
+  font-size: 24px;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #212121;
+  ;
+}
+
+/* .social{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+} */
+
 .satisfied {
   display: flex;
   flex-direction: column;
@@ -133,6 +165,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-top: 10%;
 }
 
 #portfolio {
@@ -143,19 +176,23 @@ body {
 
 #portfolio div {
   width: 20%;
+  /* white-space: pre-line; */
   /* border: 1px solid red; */
 }
 
 #portfolio div h2 {
   font-family: GlacialIndifference-Bold;
-  font-size: 40px;
+  font-size: 36px;
   color: #222222;
+  text-align: center;
 }
 
 #portfolio div h5 {
   font-family: Muli;
   font-size: 14px;
+  text-align: center;
   color: #DAAE19;
+  margin: 6px;
 }
 
 #portfolio div p {
@@ -163,6 +200,9 @@ body {
   font-size: 15px;
   letter-spacing: 0.45px;
   color: #555555;
+  padding-top: 33px;
+  text-align: right;
+  /* white-space: pre-line; */
 }
 
 #portfolio div button {
@@ -173,6 +213,8 @@ body {
   color: white;
   font-family: GlacialIndifference-Bold;
   font-size: 15px;
+  margin: 55px;
+  /* align-items: end; */
 
 }
 
@@ -216,9 +258,31 @@ body {
   transition: background-color 0.5s ease-out;
 }
 
-.contact-icon:hover{
-    background-color: #e93656;    
-}    
+.contact-icon:hover {
+  background-color: #e93656;
+}
+
+.contact-icon-text {
+  display: flex;
+  align-items: end;
+  margin-left: 10px;
+}
+
+.contact-icon-text h4 {
+  font-family: GlacialIndifference-Bold;
+  font-size: 25px;
+  letter-spacing: 0.75px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.contact-icon-text p {
+  font-family: Muli;
+  font-weight: 14px;
+  letter-spacing: 0.42px;
+  color: #DFDFDF;
+
+}
 
 
 /* section - grid */
@@ -234,9 +298,10 @@ body {
 }
 
 
-.hidden_item{
-    display: none;
+.hidden_item {
+  display: none;
 }
+
 #grid-container div {
   height: 360px;
   display: flex;
