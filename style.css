@@ -187,7 +187,7 @@ body {
   height: 100%;
 }
 
-.portfolio>div {
+.portfolio > div {
   width: 20%;
 }
 
@@ -242,10 +242,10 @@ body {
   background-color: #ccc;
 }
 
-.percent-bar>div {
+.percent-bar > div {
   width: 50%;
   height: 100%;
-  background-color: #E93656;
+  background-color: #e93656;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
@@ -390,33 +390,32 @@ body {
   padding-right: 20%;
 }
 
-#customer-review>div {
+#customer-review > div {
   /* border: 1px solid white; */
   display: flex;
   align-items: center;
   text-align: right;
 }
 
-#customer-review :nth-child(1) {
+#cr-div1 {
   /* css */
   width: 35%;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: right;
   letter-spacing: 0.45px;
   font-family: Roboto-Light;
   font-size: 15px;
   line-height: 30px;
-
 }
 
-#customer-review :nth-child(2)>div>div {
+#cr-div2 > div > div {
   width: 100px;
   height: 100px;
   border-radius: 100px;
-  background-color: #B97679;
+  background-color: #b97679;
 }
 
-#customer-review :nth-child(2)>div {
+#cr-div2 > div {
   border: 1px dashed white;
   width: 111px;
   height: 111px;
@@ -426,32 +425,32 @@ body {
   align-items: center;
 }
 
-#customer-review :nth-child(2) {
+#cr-div2 {
   /* css */
   width: 20%;
   display: flex;
   justify-content: center;
 }
 
-#customer-review :nth-child(3) {
+#cr-div3 {
   /* css */
   width: 20%;
 }
 
-#customer-review :nth-child(4) {
+#cr-div4 {
   /* css */
   width: 20%;
-  background: #FFFFFF00 0% 0% no-repeat padding-box;
-border: 2px solid #FFFFFF;
-}
 
-#swiper-box{
-  width:10px ;
   display: flex;
   flex-direction: column;
-  background: #FFFFFF00 0% 0% no-repeat padding-box;
-border: 2px solid #FFFFFF;
-background-color: transparent;
+  justify-content: center;
+  gap: 12px;
+}
+
+#cr-div4 > span {
+  width: 24px;
+  height: 24px;
+  border: 1px solid white;
 }
 
 .article-container {
@@ -460,7 +459,7 @@ background-color: transparent;
   width: 100%;
 }
 
-.article-container>div {
+.article-container > div {
   height: 400px;
 }
 
@@ -470,15 +469,15 @@ background-color: transparent;
 
 .wide-article {
   width: 40%;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   display: flex;
   flex-direction: column;
   justify-content: left;
 }
 
 .verical-text {
-  background-color: #15263E;
-  color: #E93656;
+  background-color: #15263e;
+  color: #e93656;
   font-family: GlacialIndifference-Bold;
   font-size: 30px;
 }
@@ -489,7 +488,7 @@ background-color: transparent;
   border-radius: 64px;
 }
 
-.article-icon>img {
+.article-icon > img {
   width: 100%;
   height: 100%;
 }
