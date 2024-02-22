@@ -475,7 +475,7 @@ body {
   justify-content: left;
 }
 
-.verical-text {
+.vertical-text {
   background-color: #15263e;
   color: #e93656;
   font-family: GlacialIndifference-Bold;
@@ -491,4 +491,66 @@ body {
 .article-icon > img {
   width: 100%;
   height: 100%;
+}
+.article-container h6 {
+  font-family: Muli;
+  font-size: 10px;
+  letter-spacing: 1.12px;
+  color: #888888;
+}
+
+.article-container h1 {
+  font-family: GlacialIndifference-Bold;
+  font-size: 30px;
+  letter-spacing: 0px;
+  color: #161616;
+}
+
+.article-container article {
+  font-family: Muli;
+  font-size: 12px;
+  letter-spacing: NaNpx;
+  line-height: 20px;
+}
+/* section news */
+.news-container {
+  width: 100vh;
+}
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.news h6 {
+  font-family: GlacialIndifference-Bold;
+  font-size: 12px;
+  color: #2ed279;
+}
+
+.news h1 {
+  font-family: GlacialIndifference-Bold;
+  font-size: 50px;
+  color: #262526;
+}
+.news-grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  width: 80%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.news-grid-container div {
+  width: 110px;
+  height: 110px;
+  background: #15263e 0% 0% no-repeat padding-box;
+}
+
+.latest-articles{
+  display: flex;
+  flex-direction: column;
 }
