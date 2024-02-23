@@ -453,10 +453,14 @@ body {
   border: 1px solid white;
 }
 
+/* section article */
+
 .article-container {
   display: flex;
   flex-direction: row;
   width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .article-container > div {
@@ -480,6 +484,8 @@ body {
   color: #e93656;
   font-family: GlacialIndifference-Bold;
   font-size: 30px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
 }
 
 .article-icon {
@@ -512,6 +518,10 @@ body {
   letter-spacing: NaNpx;
   line-height: 20px;
 }
+/* .article-image{
+  width: 800px;
+  
+} */
 /* section news */
 .news-container {
   width: 100vh;
@@ -553,4 +563,10 @@ body {
 .latest-articles{
   display: flex;
   flex-direction: column;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
 }
