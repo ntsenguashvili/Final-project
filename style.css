@@ -469,9 +469,14 @@ body {
   justify-content: center;
 }
 
+.latest-projects > ul > li{
+  cursor: pointer;
+  width: 100%;
+}
+
 .latest-projects>ul{
   width: 10%;
-height: 400px;
+ height: 400px;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -627,7 +632,33 @@ margin-top: 20px;
   width: 110px;
   height: 110px;
   background: #15263e 0% 0% no-repeat padding-box;
+  cursor: pointer;
+  transition:0.1s ease-in-out;
+  margin: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
 }
+.hidden{
+  visibility: hidden;
+}
+
+
+.news-grid-container div:hover {
+  width: 240px;
+  height: 180px;
+  margin: 0;
+  border: 3px solid red; 
+  background-color: unset;
+  * {
+    visibility: unset;
+  }
+}
+
 
 .contact-form{
   width: 100%;
@@ -646,6 +677,7 @@ margin-top: 20px;
   font-family: Jaapokki Regular;
   color: #FFFFFF;
 }
+
 .contact-container > h6{
   width: 100%;
   text-align: center;
@@ -712,9 +744,55 @@ margin-top: 20px;
   grid-row: 2/5;
  }
 
+/* About */
 
+#about-section{
+  background-color: #282828;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+#about-section > h1{
+  font-family: Poppins ExtraBold;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+#about-section > h1 > span{
+  color: #E93656;
+  
+}
 
+#about-section > h6{
+  font-family: Roboto Regular;
+  color: #A5A5A5;
+  width: 500px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.social-blue {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  align-items: baseline;
+  padding-left: 24px;
+  margin-top: 16px;
+}
+
+footer{
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #A0A8B7;
+  background-color: #171717;
+}
 @media screen and (max-width: 768px) {
   /* Adjust styles for smaller screens */
 }
