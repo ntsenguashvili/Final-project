@@ -12,12 +12,14 @@ let currentSlide = 0;
 function changeSlider() {
     document.getElementById('slider')
         .setAttribute("style", "background-image: url(" + sliderArray[currentSlide] + ")");
+
     currentSlide++;
+
+
     if (currentSlide > sliderArray.length) {
         currentSlide = 0;
     }
 
-    clearInterval(this)
 }
 
 
@@ -46,23 +48,23 @@ let timerStep = 0;
 
 
 function updateStats() {
-    let statsItems =Array.from(document.getElementsByClassName("stats-inner-container"));
-    let i =0;
-    
-    
+    let statsItems = Array.from(document.getElementsByClassName("stats-inner-container"));
+    let i = 0;
+
+
     statsItems.forEach(element => {
         let newValue = timerStep
-        if(timerStep >= statsVallue[i].value){
-            newValue = statsVallue[i].value; 
+        if (timerStep >= statsVallue[i].value) {
+            newValue = statsVallue[i].value;
         }
         element.children[0].innerHTML = `${statsVallue[i].name} <span>( ${newValue}% )</span>`;
         let secondChild = Array.from(element.children[1].children);
-        secondChild[0].setAttribute("style",`width: ${newValue}%`)
+        secondChild[0].setAttribute("style", `width: ${newValue}%`)
         i++;
     });
 
     timerStep++;
-    if(timerStep>=100){
+    if (timerStep >= 100) {
         clearInterval(sliderTimer)
     }
 }
@@ -96,6 +98,61 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     }
 
+    // load default slider
+    loadFeedbackSlide(0);
 
 });
+
+
+const slideItems = [
+    {
+        text: "asfasfas sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore..",
+        img: "images/d3.svg",
+        title: "Dr.",
+        name: "John A. Zoidberg",
+    },
+    {
+        text: "x sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore..",
+        img: "images/d4.svg",
+        title: "Executive Delivery Boy",
+        name: "Phillip J. Fry"
+    },
+    {
+        text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore..",
+        img: "images/d5.svg",
+        title: "Janitor",
+        name: "Scruffy"
+    },
+]
+
+
+/* Click Functions */
+function loadFeedbackSlide(slideNo) {
+    let textElement = document.getElementById("cr-div1");
+    textElement.innerHTML = slideItems[slideNo].text;
+
+    let imgElement = document.getElementById("slider-central-image");
+    
+    
+    let slideObject = slideItems[slideNo];
+
+    imgElement.setAttribute("src",slideObject.img);
+
+    let titleElement =document.getElementById("slider-central-title");
+    titleElement.innerHTML=slideItems[slideNo].title;
+
+    let nameElement =document.getElementById("slider-central-name");
+    nameElement.innerHTML=slideItems[slideNo].name;
+
+    for (let i = 0; i < slideItems.length; i++) {
+        let checkbox = document.getElementById(`slider-central-box-${i}`);
+        if(i===slideNo) {
+            checkbox.classList.add("selected-checkbox")
+        }   else { 
+            checkbox.classList.remove("selected-checkbox")
+        }     
+    }
+    
+    
+}
 
