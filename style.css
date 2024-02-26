@@ -983,17 +983,18 @@ footer {
   }
 
   #grid-container > div{
-    min-height: 240px;
+    min-height: 340px;
   }
   #grid-container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     min-width: unset;
     min-height: unset;
     max-width: unset;
     ;
     max-height: unset;
+    width: 100%;
   }
 
   #customer-review {
