@@ -220,22 +220,28 @@ function postFormToBorjomi(event) {
     event.preventDefault();
 
     // prepare data 
+
     let toSend = {
         name: document.getElementById("form-name").value,
         email: document.getElementById("form-email").value,
         website: document.getElementById("form-website").value,
-        name: document.getElementById("form-message").value,
+        message: document.getElementById("form-message").value,
     }
 
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
+
     xhr.onreadystatechange = function () {
         console.log(this.status);
     };
-    var url = "https://borjomi.loremipsum.ge/api/send-message";
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader("Content-Type", "application/json");
 
 
-    var data = JSON.stringify(toSend);
-    xhr.send(data);
+    try {
+        xhr.open("POST", url, true);
+
+        xhr.setRequestHeader("Content-Type", "application/json");
+        let data = JSON.stringify(toSend);
+        xhr.send(data);
+    } catch (ex) {
+        console.log(ex);
+    }
 }
