@@ -2,9 +2,9 @@
 // slider
 
 const sliderArray = [
-    "images/twitter.png",
-    "images/google+.png",
-    "images/rss.png",
+    "images/slide-image1.jpg",
+    "images/slide-image2.jpg",
+    "images/slide-image3.jpg",
 ]
 
 let currentSlide = 0;

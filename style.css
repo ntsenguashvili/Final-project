@@ -51,7 +51,7 @@ footer {
   position: relative;
   min-height: 800px;
   height: 100vh;
-  background-image: url("images/twitter.png");
+  background-image: url("images/slide-image1.jpg");
   background-size: cover;
 }
 
@@ -68,7 +68,7 @@ footer {
   text-align: left;
   letter-spacing: 1.2px;
   color: #1a1a1a;
-  font-family: Poppins-ExtraBold;
+  font-family: 'Poppins ExtraBold';
   font-size: 40px;
 }
 
@@ -76,7 +76,7 @@ footer {
   text-align: left;
   letter-spacing: 0px;
   color: #b3b3b3;
-  font-family: Montserrat-Regular;
+  font-family: 'Montserrat Regular';
   font-size: 13px;
 }
 
@@ -89,17 +89,16 @@ footer {
   width: 100%;
   justify-content: flex-end;
   padding-right: 82px;
-  font-family: Poppins-ExtraBold;
+  font-family: 'Poppins ExtraBold';
   font-size: 43px;
 }
 
 .description {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-end;
   position: absolute;
-  right: 30%;
+  right: 20%;
   bottom: 20%;
   width: 60%;
 
@@ -116,7 +115,7 @@ footer {
 }
 
 .description div p:first-child {
-  font-family: GlacialIndifference-Regular;
+  font-family: 'Glacial Indifference Regular';
   font-size: 49.7px;
   text-align: left;
   letter-spacing: 0.75px;
@@ -124,7 +123,7 @@ footer {
 }
 
 .description div p:nth-child(2) {
-  font-family: Glacial Indifference Bold;
+  font-family: ''Glacial Indifference Bold'';
   font-size: 71px;
   text-align: left;
   letter-spacing: 1.06px;
@@ -132,7 +131,7 @@ footer {
 }
 
 .description div p:nth-child(3) {
-  font-family: GlacialIndifference-Regular;
+  font-family: 'Glacial Indifference Regular';
   font-size: 24px;
   text-align: left;
   letter-spacing: 0px;
@@ -199,7 +198,7 @@ footer {
 #portfolio-image img {
   background-color: #555555;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .portfolio>div {
@@ -207,22 +206,24 @@ footer {
 }
 
 .portfolio div h2 {
-  font-family: Glacial Indifference Bold;
+  font-family: 'Glacial Indifference Bold';
   font-size: 36px;
   color: #222222;
-  text-align: center;
+  text-align: right;
 }
 
 .portfolio div h5 {
-  font-family: Muli Regular;
+  font-family:  'Muli Regular'
+;
   font-size: 14px;
-  text-align: center;
+  text-align: right;
   color: #daae19;
   margin: 6px;
 }
 
 .portfolio div p {
-  font-family: Muli Regular-Regular;
+  font-family:  'Muli Regular'
+-Regular;
   font-size: 15px;
   letter-spacing: 0.45px;
   color: #555555;
@@ -278,7 +279,7 @@ footer {
   height: 50px;
   border-color: #e93656;
   color: white;
-  font-family: Glacial Indifference Bold;
+  font-family: 'Glacial Indifference Bold';
   font-size: 15px;
   /* align-items: end; */
   margin-top: 55px;
@@ -337,7 +338,7 @@ footer {
 }
 
 .contact-icon-text h4 {
-  font-family: Glacial Indifference Bold;
+  font-family: 'Glacial Indifference Bold';
   font-size: 25px;
   letter-spacing: 0.75px;
   color: #ffffff;
@@ -345,7 +346,8 @@ footer {
 }
 
 .contact-icon-text p {
-  font-family: Muli Regular;
+  font-family:  'Muli Regular'
+;
   font-weight: 14px;
   letter-spacing: 0.42px;
   color: #dfdfdf;
@@ -416,7 +418,7 @@ footer {
 }
 
 #grid-container div p {
-  font-family: Glacial Indifference Bold;
+  font-family: 'Glacial Indifference Bold';
   font-size: 22px;
   letter-spacing: 0.44px;
   color: #222222;
@@ -437,7 +439,6 @@ footer {
 }
 
 #customer-review>div {
-  /* border: 1px solid white; */
   display: flex;
   align-items: center;
   text-align: right;
@@ -449,7 +450,7 @@ footer {
   color: #ffffff;
   text-align: right;
   letter-spacing: 0.45px;
-  font-family: Roboto-Light;
+  font-family: 'Roboto Light';
   font-size: 15px;
   line-height: 30px;
 }
@@ -530,7 +531,7 @@ footer {
   background-color: #15263E;
   color: #FFFFFF;
   padding: 18px;
-  font-family: Glacial Indifference Bold;
+  font-family: 'Glacial Indifference Bold';
   font-size: 1.2em;
   line-height: 40px;
 }
@@ -568,7 +569,7 @@ footer {
   margin-top: 60px;
   margin-bottom: 60px;
   font-size: 4em;
-  font-family: Glacial Indifference Bold;
+  font-family: 'Glacial Indifference Bold';
   color: #2E2E2E;
 
 }
@@ -592,7 +593,7 @@ footer {
 .vertical-text {
   background-color: #15263e;
   color: #e93656;
-  font-family: Glacial Indifference Bold;
+  font-family: 'Glacial Indifference Bold';
   font-size: 30px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -614,7 +615,8 @@ footer {
 }
 
 .article-container h6 {
-  font-family: Muli Regular;
+  font-family:  'Muli Regular'
+;
   font-size: 0.7em;
   letter-spacing: 1.12px;
   color: #888888;
@@ -622,7 +624,7 @@ footer {
 }
 
 .article-container h1 {
-  font-family: Glacial Indifference Bold;
+  font-family: 'Glacial Indifference Bold';
   font-size: 2em;
   letter-spacing: 0px;
   color: #161616;
@@ -630,7 +632,8 @@ footer {
 }
 
 .article-container article {
-  font-family: Muli Regular;
+  font-family:  'Muli Regular'
+;
   font-size: 1em;
   color: #494949;
   line-height: 20px;
@@ -659,13 +662,13 @@ footer {
 }
 
 .news h6 {
-  font-family: Glacial Indifference Bold;
+  font-family: 'Glacial Indifference Bold';
   font-size: 12px;
   color: #2ed279;
 }
 
 .news h1 {
-  font-family: Glacial Indifference Bold;
+  font-family: 'Glacial Indifference Bold';
   font-size: 50px;
   color: #262526;
 }
@@ -706,7 +709,7 @@ footer {
   width: 240px;
   height: 180px;
   margin: 0;
-  border: 3px solid red;
+  border: 3px solid #E93656;
   background-color: unset;
 
   * {
@@ -729,7 +732,7 @@ footer {
   text-align: center;
   margin-top: 60px;
   font-size: 4em;
-  font-family: Jaapokki Regular;
+  font-family: 'Jaapokki Regular';
   color: #FFFFFF;
 }
 
@@ -738,7 +741,7 @@ footer {
   text-align: center;
   margin-bottom: 60px;
   font-size: 1em;
-  font-family: Roboto-Light;
+  font-family: 'Roboto Light';
   color: #FFFFFF;
 }
 
@@ -790,7 +793,7 @@ footer {
   background-color: rgba(0, 0, 0, 0);
   color: #E93656;
   font-size: 1em;
-  font-family: Glacial Indifference Bold;
+  font-family: 'Glacial Indifference Bold';
 
 }
 
@@ -818,9 +821,11 @@ footer {
 }
 
 #about-section>h1 {
-  font-family: Poppins ExtraBold;
+  font-family: 'Poppins ExtraBold'
+;
   font-size: 4em;
   text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 #about-section>h1>span {
@@ -829,7 +834,7 @@ footer {
 }
 
 #about-section>h6 {
-  font-family: Roboto Regular;
+  font-family: 'Roboto Regular';
   color: #A5A5A5;
   width: 500px;
   font-size: 1em;
@@ -855,6 +860,8 @@ footer {
   align-items: center;
   color: #A0A8B7;
   background-color: #171717;
+  font-size: 14px;
+  font-family: 'roboto regular';
 }
 
 @media screen and (max-width: 768px) {
