@@ -28,8 +28,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     });
 
-
-
+    // Send Data to API
+    const form = document.getElementById("contact-form");
+    form.addEventListener("submit", postFormToBorjomi);
 });
 
 
@@ -173,14 +174,13 @@ function loadFeedbackSlide(slideNo) {
 /* Filter List */
 function filterList(filterText) {
     let filterDiv = document.getElementById("filter-div");
-    let divContent =  Array.from(filterDiv.children);
+    let divContent = Array.from(filterDiv.children);
 
 
     // Filter out all unselected items 
     divContent.forEach(element => {
-        if(`div-${filterText}` === element.id) {
+        if (`div-${filterText}` === element.id) {
             element.setAttribute("style", "display:grid");
-            
         } else {
             element.setAttribute("style", "display:none");
         }
@@ -195,26 +195,47 @@ function filterList(filterText) {
         });
 
         document.getElementById("select-all").classList.add("selected-project");
-    } 
+    }
 
 
     // Mark Correct Ul>Li
-    
+
     let ulItems = document.getElementById("filter-ul");
     let ulArray = Array.from(ulItems.children);
 
     ulArray.forEach(element => {
-        console.log(element.id);
-        if(element.id === filterText){
+        if (element.id === filterText) {
             element.classList.add("selected-project");
         } else {
             element.classList.remove("selected-project");
         }
     });
-    
-    
+}
 
 
-   
 
+// Post to Borjomi
+
+function postFormToBorjomi(event) {
+    event.preventDefault();
+
+    // prepare data 
+    let toSend = {
+        name: document.getElementById("form-name").value,
+        email: document.getElementById("form-email").value,
+        website: document.getElementById("form-website").value,
+        name: document.getElementById("form-message").value,
+    }
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        console.log(this.status);
+    };
+    var url = "https://borjomi.loremipsum.ge/api/send-message";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+
+    var data = JSON.stringify(toSend);
+    xhr.send(data);
 }
