@@ -1,3 +1,38 @@
+document.addEventListener("DOMContentLoaded", function (event) {
+    // Run All Tasks when Loaded
+    setInterval(changeSlider, 5000);
+
+
+    //  Stats Loader, with intersection Observer
+    let target = document.querySelector("#stats-container");
+
+    if (target) {
+        const observer = new IntersectionObserver(statsVisible, {
+            root: null, // Use the viewport as the root
+            threshold: 1, // Trigger when 100% of the element is visible
+        });
+        observer.observe(target);
+
+    }
+
+    // load default slider
+    loadFeedbackSlide(0);
+
+
+    // Attach Filter Hooks
+    let filterUl = document.getElementById("filter-ul");
+    filterUl.addEventListener('click', function (event) {
+        if (event.target.tagName === 'LI') {
+            const clickedItemId = event.target.id;
+            filterList(clickedItemId);
+        }
+    });
+
+
+
+});
+
+
 
 // slider
 
@@ -16,7 +51,7 @@ function changeSlider() {
     currentSlide++;
 
 
-    if (currentSlide > sliderArray.length) {
+    if (currentSlide >= sliderArray.length) {
         currentSlide = 0;
     }
 
@@ -81,27 +116,6 @@ function statsVisible(entries, observer) {
 }
 
 
-document.addEventListener("DOMContentLoaded", function (event) {
-    // Run All Tasks when Loaded
-    setInterval(changeSlider, 5000);
-
-
-    //  Stats Loader, with intersection Observer
-    let target = document.querySelector("#stats-container");
-
-    if (target) {
-        const observer = new IntersectionObserver(statsVisible, {
-            root: null, // Use the viewport as the root
-            threshold: 1, // Trigger when 100% of the element is visible
-        });
-        observer.observe(target);
-
-    }
-
-    // load default slider
-    loadFeedbackSlide(0);
-
-});
 
 
 const slideItems = [
@@ -132,27 +146,75 @@ function loadFeedbackSlide(slideNo) {
     textElement.innerHTML = slideItems[slideNo].text;
 
     let imgElement = document.getElementById("slider-central-image");
-    
-    
+
+
     let slideObject = slideItems[slideNo];
 
-    imgElement.setAttribute("src",slideObject.img);
+    imgElement.setAttribute("src", slideObject.img);
 
-    let titleElement =document.getElementById("slider-central-title");
-    titleElement.innerHTML=slideItems[slideNo].title;
+    let titleElement = document.getElementById("slider-central-title");
+    titleElement.innerHTML = slideItems[slideNo].title;
 
-    let nameElement =document.getElementById("slider-central-name");
-    nameElement.innerHTML=slideItems[slideNo].name;
+    let nameElement = document.getElementById("slider-central-name");
+    nameElement.innerHTML = slideItems[slideNo].name;
 
     for (let i = 0; i < slideItems.length; i++) {
         let checkbox = document.getElementById(`slider-central-box-${i}`);
-        if(i===slideNo) {
+        if (i === slideNo) {
             checkbox.classList.add("selected-checkbox")
-        }   else { 
+        } else {
             checkbox.classList.remove("selected-checkbox")
-        }     
+        }
     }
-    
-    
+
+
 }
 
+/* Filter List */
+function filterList(filterText) {
+    let filterDiv = document.getElementById("filter-div");
+    let divContent =  Array.from(filterDiv.children);
+
+
+    // Filter out all unselected items 
+    divContent.forEach(element => {
+        if(`div-${filterText}` === element.id) {
+            element.setAttribute("style", "display:grid");
+            
+        } else {
+            element.setAttribute("style", "display:none");
+        }
+    });
+
+
+
+    // Special Case for Select All
+    if (filterText === "select-all") {
+        divContent.forEach(element => {
+            element.setAttribute("style", "display:grid");
+        });
+
+        document.getElementById("select-all").classList.add("selected-project");
+    } 
+
+
+    // Mark Correct Ul>Li
+    
+    let ulItems = document.getElementById("filter-ul");
+    let ulArray = Array.from(ulItems.children);
+
+    ulArray.forEach(element => {
+        console.log(element.id);
+        if(element.id === filterText){
+            element.classList.add("selected-project");
+        } else {
+            element.classList.remove("selected-project");
+        }
+    });
+    
+    
+
+
+   
+
+}
