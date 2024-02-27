@@ -236,9 +236,9 @@ function postFormToJson(event) {
         console.log(this.status);
         if (this.readyState===4) {
             if (this.status>=200&&this.status<300) {
-            alert("succesfully");
+            alert("Thank You, We will contact you shortly");
             } else {
-                alert("try again");
+                alert("sorry, seems that we have some issues, come back later");
                 
             } 
         }
