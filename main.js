@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // Send Data to API
     const form = document.getElementById("contact-form");
-    form.addEventListener("submit", postFormToBorjomi);
+    form.addEventListener("submit", postFormToJson);
 });
 
 
@@ -121,7 +121,7 @@ function statsVisible(entries, observer) {
 
 const slideItems = [
     {
-        text: "asfasfas sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore..",
+        text: "sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore..",
         img: "images/d3.svg",
         title: "Dr.",
         name: "John A. Zoidberg",
@@ -214,9 +214,9 @@ function filterList(filterText) {
 
 
 
-// Post to Borjomi
+// Post to jsonplaceholder
 
-function postFormToBorjomi(event) {
+function postFormToJson(event) {
     event.preventDefault();
 
     // prepare data 
@@ -228,11 +228,23 @@ function postFormToBorjomi(event) {
         message: document.getElementById("form-message").value,
     }
 
+    const url="https://jsonplaceholder.typicode.com/posts"
+
     let xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
         console.log(this.status);
+        if (this.readyState===4) {
+            if (this.status>=200&&this.status<300) {
+            alert("succesfully");
+            } else {
+                alert("try again");
+                
+            } 
+        }
+       
     };
+
 
 
     try {
