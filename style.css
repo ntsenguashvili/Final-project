@@ -26,6 +26,7 @@ body {
 .main-container {
   width: 100vw;
   max-width: 1900px;
+  min-width: 1000px;
   margin: 0 auto;
   overflow-x: hidden;
 }
